@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    android:backgroundTint="#00FDF6FE"
+    android:orientation="horizontal"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/film_item_poster_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/film_item_poster_p_image"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/film_4" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/film_item_genres_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="101dp"
+        app:layout_constraintTop_toBottomOf="@id/film_item_name_p"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:layout_width="61dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#DBE3FF"
+            android:fontFamily="@font/mulish"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingLeft="12px"
+            android:paddingTop="4px"
+            android:paddingRight="12px"
+            android:paddingBottom="4px"
+            android:text="Horror"
+            android:textAllCaps="true"
+            android:textColor="#88A4E8"
+            android:textSize="8sp"
+            app:cornerRadius="100dp"/>
+
+        <Button
+            android:layout_width="61dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#DBE3FF"
+            android:fontFamily="@font/mulish"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingLeft="12px"
+            android:paddingTop="4px"
+            android:paddingRight="12px"
+            android:paddingBottom="4px"
+            android:text="Mystery"
+            android:textAllCaps="true"
+            android:textColor="#88A4E8"
+            android:textSize="8sp"
+            app:cornerRadius="100dp"/>
+
+        <Button
+            android:layout_width="61dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#DBE3FF"
+            android:fontFamily="@font/mulish"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingLeft="12px"
+            android:paddingTop="4px"
+            android:paddingRight="12px"
+            android:paddingBottom="4px"
+            android:text="Thriller"
+            android:textAllCaps="true"
+            android:textColor="#88A4E8"
+            android:textSize="8sp"
+            app:cornerRadius="100dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/film_item_name_p"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:fontFamily="@font/mulish_extrabold"
+        android:text="@string/popular_name_film_1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/film_item_rating_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/muli_light"
+        android:text="@string/popular_rating_film_1"
+        android:textColor="#9C9C9C"
+        android:textColorLink="#9C9C9C"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/film_item_genres_p">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/film_item_star_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="101dp"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/star"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/film_item_genres_p"/>
+
+    <ImageView
+        android:id="@+id/film_item_duration_image_p"
+        android:layout_width="10dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/duration_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/film_item_rating_p"/>
+
+    <TextView
+        android:id="@+id/film_item_duration_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mulish"
+        android:text="1h 47m"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/film_item_duration_image_p"
+        app:layout_constraintTop_toBottomOf="@id/film_item_rating_p" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

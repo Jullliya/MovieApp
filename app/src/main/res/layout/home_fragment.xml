@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="2dp"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="133dp"
+        android:layout_height="match_parent"
+        android:background="#EFEFF2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal"
+        android:searchIcon="@drawable/search_normal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+    </SearchView>
+
+    <TextView
+        android:id="@+id/now_showing_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/merriweather_bold"
+        android:text="@string/now_showing"
+        android:textColor="#110E47"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/home"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <Button
+        android:id="@+id/see_more_now_showing"
+        android:layout_width="61dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FDF6FE"
+        android:fontFamily="@font/mulish"
+        android:gravity="center|top"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingLeft="4px"
+        android:paddingTop="8px"
+        android:paddingRight="4px"
+        android:paddingBottom="8px"
+        android:text="@string/see_more"
+        android:textColor="#AAA9B1"
+        android:textSize="10sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintRight_toRightOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:strokeColor="#AAA9B1"
+        app:strokeWidth="1px"
+        tools:ignore="SmallSp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/now_showing"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:scrollbarSize="0dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:context=".MainActivity"
+        tools:ignore="RtlSymmetry"
+        tools:listitem="@layout/now_showing_recyclerview_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/popular_text"
+        android:layout_width="66dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/merriweather_bold"
+        android:text="@string/popular"
+        android:textColor="#110E47"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/now_showing" />
+
+    <Button
+        android:id="@+id/see_more_popular"
+        android:layout_width="61dp"
+        android:layout_height="21dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FDF6FE"
+        android:fontFamily="@font/mulish"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingLeft="4px"
+        android:paddingTop="8px"
+        android:paddingRight="4px"
+        android:paddingBottom="8px"
+        android:text="@string/see_more"
+        android:textColor="#AAA9B1"
+        android:textSize="10sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/now_showing"
+        app:strokeColor="#AAA9B1"
+        app:strokeWidth="1px"
+        tools:ignore="SmallSp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popular"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@id/popular_text"
+        tools:context=".MainActivity"
+        tools:ignore="RtlSymmetry"
+        tools:listitem="@layout/popular_recyclerview_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather_bold"
+        android:text="FilmKu"
+        android:textColor="#110E47"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
