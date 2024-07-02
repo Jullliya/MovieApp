@@ -14,8 +14,8 @@ class ActorAdapter(private val actorList: List<Actor>):
 
         fun bind(actor: Actor){
             with(binding){
-                ivImage.setImageResource(R.drawable.cast_1)
-                tvName.text = actor.name
+                ivItemActorImage.setImageResource(actor.image)
+                tvItemActorName.text = actor.name
             }
         }
     }

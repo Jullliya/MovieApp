@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerViewPopular: RecyclerView
     private lateinit var recyclerViewDetailMovieCast: RecyclerView
     private lateinit var filmListNowShowing: ArrayList<Film>
-    private lateinit var filmListPopular: ArrayList<PopularFilms>
+    private lateinit var filmListPopular: ArrayList<Film>
     private lateinit var castListDetailMovie: ArrayList<Actor>
     private lateinit var filmAdapterNowShowing: NowShowingFilmAdapter
     private lateinit var filmAdapterPopular: PopularFilmAdapter
@@ -77,11 +77,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addDataToList(){
-        filmListNowShowing.add(Film(R.drawable.film_1, "Spiderman: No Way Home", "9.1/10 IMDb"))
-        filmListNowShowing.add(Film(R.drawable.film_2, "Eternals","9.5/10 IMDb"))
-        filmListNowShowing.add(Film(R.drawable.film_3, "Shang-Chi", "8,1/10 IMDb"))
+        filmListNowShowing.add(Film(R.drawable.film_1, "Spiderman: No Way Home", "9.1/10 IMDb", listOf(""),""))
+        filmListNowShowing.add(Film(R.drawable.film_2, "Eternals","9.5/10 IMDb", listOf(""),""))
+        filmListNowShowing.add(Film(R.drawable.film_3, "Shang-Chi", "8,1/10 IMDb", listOf(""),""))
 
-        filmListPopular.add(PopularFilms(R.drawable.film_4, "Venom Let There Be Carnage", "6.4/10 IMDb", "1h 47m"))
-        filmListPopular.add(PopularFilms(R.drawable.film_5, "The King’s Man", "8.4/10 IMDb", "1h 47m"))
+        filmListPopular.add(Film(R.drawable.film_4, "Venom Let There Be Carnage", "6.4/10 IMDb", listOf(""),"1h 47m"))
+        filmListPopular.add(Film(R.drawable.film_5, "The King’s Man", "8.4/10 IMDb", listOf(""),"1h 47m"))
     }
 }
