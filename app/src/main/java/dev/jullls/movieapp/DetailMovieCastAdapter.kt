@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DetailMovieCastAdapter(private val castList: List<DetailMovieCast>):
+class DetailMovieCastAdapter(private val castList: List<Actor>):
     RecyclerView.Adapter<DetailMovieCastAdapter.CastViewHolder>() {
 
     class CastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -27,8 +27,8 @@ class DetailMovieCastAdapter(private val castList: List<DetailMovieCast>):
 
     override fun onBindViewHolder(holder: CastViewHolder, position: Int) {
         val cast = castList[position]
-        holder.castImageView.setImageResource(cast.imageCast)
-        holder.castName.text = cast.nameCast
+        holder.castImageView.setImageResource(cast.image)
+        holder.castName.text = cast.name
 
     }
 }

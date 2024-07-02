@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerViewDetailMovieCast: RecyclerView
     private lateinit var filmListNowShowing: ArrayList<NowShowingFilms>
     private lateinit var filmListPopular: ArrayList<PopularFilms>
-    private lateinit var castListDetailMovie: ArrayList<DetailMovieCast>
+    private lateinit var castListDetailMovie: ArrayList<Actor>
     private lateinit var filmAdapterNowShowing: NowShowingFilmAdapter
     private lateinit var filmAdapterPopular: PopularFilmAdapter
     private lateinit var castAdapterDetailMovie: DetailMovieCastAdapter
@@ -47,10 +47,10 @@ class MainActivity : AppCompatActivity() {
             recyclerViewDetailMovieCast.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
             castListDetailMovie = ArrayList()
 
-            castListDetailMovie.add(DetailMovieCast(R.drawable.cast_1, "Tom Holland"))
-            castListDetailMovie.add(DetailMovieCast(R.drawable.cast_2, "Zendaya"))
-            castListDetailMovie.add(DetailMovieCast(R.drawable.cast_3, "Benedict Cumberbatch"))
-            castListDetailMovie.add(DetailMovieCast(R.drawable.cast_4, "Jacon Batalon"))
+            castListDetailMovie.add(Actor(R.drawable.cast_1, "Tom Holland"))
+            castListDetailMovie.add(Actor(R.drawable.cast_2, "Zendaya"))
+            castListDetailMovie.add(Actor(R.drawable.cast_3, "Benedict Cumberbatch"))
+            castListDetailMovie.add(Actor(R.drawable.cast_4, "Jacon Batalon"))
 
             castAdapterDetailMovie = DetailMovieCastAdapter(castListDetailMovie)
             recyclerViewDetailMovieCast.adapter = castAdapterDetailMovie
