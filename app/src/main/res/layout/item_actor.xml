@@ -13,7 +13,7 @@
         android:layout_gravity="center">
 
         <ImageView
-            android:id="@+id/detail_movie_cast_item_image"
+            android:id="@+id/iv_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
@@ -22,10 +22,10 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/detail_movie_cast_item_name"
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tom Holland"
+        android:text="@string/detail_movie_tom_holland"
         android:textSize="12sp"
         android:textColor="#110E47"
         android:layout_marginTop="4dp"

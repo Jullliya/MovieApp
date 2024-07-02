@@ -327,7 +327,7 @@
         app:layout_constraintTop_toBottomOf="@+id/detail_movie_cast"
         tools:context=".MainActivity"
         tools:ignore="RtlSymmetry"
-        tools:listitem="@layout/detail_movie_cast_item">
+        tools:listitem="@layout/item_actor">
     </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
