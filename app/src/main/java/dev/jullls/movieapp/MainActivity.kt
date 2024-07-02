@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var castListDetailMovie: ArrayList<Actor>
     private lateinit var filmAdapterNowShowing: NowShowingFilmAdapter
     private lateinit var filmAdapterPopular: PopularFilmAdapter
-    private lateinit var castAdapterDetailMovie: DetailMovieCastAdapter
+    private lateinit var castAdapterDetailMovie: ActorAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             castListDetailMovie.add(Actor(R.drawable.cast_3, "Benedict Cumberbatch"))
             castListDetailMovie.add(Actor(R.drawable.cast_4, "Jacon Batalon"))
 
-            castAdapterDetailMovie = DetailMovieCastAdapter(castListDetailMovie)
+            castAdapterDetailMovie = ActorAdapter(castListDetailMovie)
             recyclerViewDetailMovieCast.adapter = castAdapterDetailMovie
         }
     }

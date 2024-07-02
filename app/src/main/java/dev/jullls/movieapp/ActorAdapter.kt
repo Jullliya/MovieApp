@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DetailMovieCastAdapter(private val castList: List<Actor>):
-    RecyclerView.Adapter<DetailMovieCastAdapter.CastViewHolder>() {
+class ActorAdapter(private val castList: List<Actor>):
+    RecyclerView.Adapter<ActorAdapter.CastViewHolder>() {
 
     class CastViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val castImageView: ImageView = itemView.findViewById(R.id.detail_movie_cast_item_image)
