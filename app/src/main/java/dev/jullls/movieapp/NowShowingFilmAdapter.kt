@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class NowShowingFilmAdapter(private val filmList: List<NowShowingFilms>):
+class NowShowingFilmAdapter(private val filmList: List<Film>):
     RecyclerView.Adapter<NowShowingFilmAdapter.FilmViewHolder>() {
 
     class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
