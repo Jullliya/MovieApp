@@ -22,7 +22,7 @@ class ActorAdapter(private val actorList: List<Actor>):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.detail_movie_layout, parent, false)
+            R.layout.fragment_detail_movie, parent, false)
         return ActorViewHolder(view)
     }
 
