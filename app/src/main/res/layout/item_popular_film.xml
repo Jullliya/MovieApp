@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="120dp"
+    android:backgroundTint="#00FDF6FE"
+    android:orientation="horizontal"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item_popular_poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_item_popular_poster"
+            android:layout_width="85dp"
+            android:layout_height="120dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/film_4" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipgroup_item_popular_genres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:chipSpacingHorizontal="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_popular_name">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_item_film_genre_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DBE3FF"
+            android:elegantTextHeight="false"
+            android:freezesText="false"
+            android:text="Horror"
+            android:textAllCaps="true"
+            android:textColor="#88A4E8"
+            android:textSize="8sp"
+            app:chipCornerRadius="100dp"
+            app:chipEndPadding="12dp"
+            app:chipMinHeight="18dp"
+            app:chipMinTouchTargetSize="18dp"
+            app:chipStartPadding="12dp"
+            app:chipStrokeColor="#DBE3FF"
+            app:textEndPadding="0dp"
+            app:textStartPadding="0dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_item_film_genre_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DBE3FF"
+            android:elegantTextHeight="false"
+            android:freezesText="false"
+            android:text="Mystery"
+            android:textAllCaps="true"
+            android:textColor="#88A4E8"
+            android:textSize="8sp"
+            app:chipCornerRadius="100dp"
+            app:chipEndPadding="12dp"
+            app:chipMinHeight="18dp"
+            app:chipMinTouchTargetSize="18dp"
+            app:chipStartPadding="12dp"
+            app:chipStrokeColor="#DBE3FF"
+            app:textEndPadding="0dp"
+            app:textStartPadding="0dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_item_film_genre_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DBE3FF"
+            android:elegantTextHeight="false"
+            android:freezesText="false"
+            android:text="Thriller"
+            android:textAllCaps="true"
+            android:textColor="#88A4E8"
+            android:textSize="8sp"
+            app:chipCornerRadius="100dp"
+            app:chipEndPadding="12dp"
+            app:chipMinHeight="18dp"
+            app:chipMinTouchTargetSize="18dp"
+            app:chipStartPadding="12dp"
+            app:chipStrokeColor="#DBE3FF"
+            app:textEndPadding="0dp"
+            app:textStartPadding="0dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/tv_item_popular_name"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:fontFamily="@font/mulish_extrabold"
+        android:text="@string/popular_name_film_1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_item_popular_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/muli_light"
+        android:text="@string/popular_rating_film_1"
+        android:textColor="#9C9C9C"
+        android:textColorLink="#9C9C9C"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipgroup_item_popular_genres">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iv_item_popular_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="11dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipgroup_item_popular_genres"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/iv_item_popular_duration"
+        android:layout_width="10dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/duration_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_popular_rating"/>
+
+    <TextView
+        android:id="@+id/tv_item_popular_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mulish"
+        android:text="1h 47m"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/iv_item_popular_duration"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_popular_rating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
