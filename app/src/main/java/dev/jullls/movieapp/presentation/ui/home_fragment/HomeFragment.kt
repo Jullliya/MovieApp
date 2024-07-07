@@ -55,7 +55,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupUI()
+        setupRecyclerNowShowing()
+        setupRecyclerPopular()
         setupListeners()
     }
 
@@ -67,17 +68,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun setupUI() {
+    private fun setupRecyclerPopular() {
+        with(binding) {
+            rvHomePopular.setHasFixedSize(true)
+            rvHomePopular.layoutManager =
+                LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
+            rvHomePopular.adapter = PopularFilmAdapter(filmListPopular)
+        }
+    }
+
+    private fun setupRecyclerNowShowing(){
         with(binding) {
             rvHomeNowShowing.setHasFixedSize(true)
             rvHomeNowShowing.layoutManager =
                 LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             rvHomeNowShowing.adapter = NowShowingFilmAdapter(filmListNowShowing)
-
-            rvHomePopular.setHasFixedSize(true)
-            rvHomePopular.layoutManager =
-                LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
-            rvHomePopular.adapter = PopularFilmAdapter(filmListPopular)
         }
     }
 }

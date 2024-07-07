@@ -11,10 +11,10 @@
         tools:layout="@layout/fragment_detail_movie">
         <action
             android:id="@+id/action_detailFragment_to_homeFragment"
-            app:destination="@id/fragmentHome" />
+            app:destination="@id/container" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentHome"
+        android:id="@+id/container"
         android:name="dev.jullls.movieapp.presentation.ui.home_fragment.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
