@@ -12,4 +12,5 @@
     <color name="button_stroke_see_more">#E5E4EA</color>
     <color name="light_shadow">#404040</color>
     <color name="shadow">#00FDF6FE</color>
+    <color name="home_background">#F9F9FA</color>
 </resources>

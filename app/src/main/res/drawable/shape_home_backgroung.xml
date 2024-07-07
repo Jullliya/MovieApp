@@ -2,17 +2,17 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <size android:width="375dp"
-                android:height="768dp"/>
-            <solid android:color="#FFFFFF"/>
+            <size android:width="0dp"
+                android:height="0dp"/>
+            <solid android:color="@color/white"/>
         </shape>
     </item>
     <item
-        android:right="282dp">
+        android:gravity="left">
         <shape android:shape="rectangle">
-            <size android:width="100dp"
-                android:height="768dp"/>
-            <solid android:color="#F9F9FA"/>
+            <size android:width="130dp"
+                android:height="0dp"/>
+            <solid android:color="@color/home_background"/>
         </shape>
     </item>
 </layer-list>
