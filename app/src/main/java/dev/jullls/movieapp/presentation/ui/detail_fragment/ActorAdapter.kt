@@ -1,19 +1,21 @@
-package dev.jullls.movieapp
+package dev.jullls.movieapp.presentation.ui.detail_fragment
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import dev.jullls.movieapp.R
 import dev.jullls.movieapp.databinding.ItemActorBinding
+import dev.jullls.movieapp.presentation.model.Actor
 
-class ActorAdapter(private val actorList: List<Actor>):
+class ActorAdapter(private val actorList: List<Actor>) :
     RecyclerView.Adapter<ActorAdapter.ActorViewHolder>() {
 
-    class ActorViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    class ActorViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemActorBinding.bind(view)
 
-        fun bind(actor: Actor){
-            with(binding){
+        fun bind(actor: Actor) {
+            with(binding) {
                 ivItemActorImage.setImageResource(actor.image)
                 tvItemActorName.text = actor.name
             }
@@ -22,7 +24,8 @@ class ActorAdapter(private val actorList: List<Actor>):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.fragment_detail_movie, parent, false)
+            R.layout.fragment_detail_movie, parent, false
+        )
         return ActorViewHolder(view)
     }
 
