@@ -36,6 +36,10 @@ class DetailFragment : Fragment(R.layout.fragment_detail_movie) {
     }
 
     private fun setupUI() {
+        setupRecyclerActor()
+    }
+
+    private fun setupRecyclerActor(){
         with(binding) {
             rvDetailActors.setHasFixedSize(true)
             rvDetailActors.layoutManager =

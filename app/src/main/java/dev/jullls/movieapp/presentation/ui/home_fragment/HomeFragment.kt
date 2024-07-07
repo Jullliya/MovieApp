@@ -55,8 +55,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupRecyclerNowShowing()
-        setupRecyclerPopular()
+        setupUI()
         setupListeners()
     }
 
@@ -66,6 +65,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
             }
         }
+    }
+
+    private fun setupUI(){
+        setupRecyclerNowShowing()
+        setupRecyclerPopular()
     }
 
     private fun setupRecyclerPopular() {
