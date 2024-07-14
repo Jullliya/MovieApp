@@ -6,15 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.movieapp.R
 import dev.jullls.movieapp.databinding.ItemPopularFilmBinding
-import dev.jullls.movieapp.presentation.model.Film
+import dev.jullls.movieapp.domain.filmApi.model.FilmModel
 
-class PopularFilmAdapter(private val filmList: List<Film>) :
+class PopularFilmAdapter(private val filmList: List<FilmModel>) :
     RecyclerView.Adapter<PopularFilmAdapter.FilmViewHolder>() {
 
     class FilmViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemPopularFilmBinding.bind(view)
 
-        fun bind(film: Film) {
+        fun bind(film: FilmModel) {
             with(binding) {
                 ivItemPopularPoster.setImageResource(film.image)
                 tvItemPopularName.text = film.name

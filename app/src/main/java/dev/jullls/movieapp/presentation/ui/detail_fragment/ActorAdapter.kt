@@ -6,15 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.movieapp.R
 import dev.jullls.movieapp.databinding.ItemActorBinding
-import dev.jullls.movieapp.presentation.model.Actor
+import dev.jullls.movieapp.domain.filmApi.model.ActorModel
 
-class ActorAdapter(private val actorList: List<Actor>) :
+class ActorAdapter(private val actorList: List<ActorModel>) :
     RecyclerView.Adapter<ActorAdapter.ActorViewHolder>() {
 
     class ActorViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemActorBinding.bind(view)
 
-        fun bind(actor: Actor) {
+        fun bind(actor: ActorModel) {
             with(binding) {
                 ivItemActorImage.setImageResource(actor.image)
                 tvItemActorName.text = actor.name

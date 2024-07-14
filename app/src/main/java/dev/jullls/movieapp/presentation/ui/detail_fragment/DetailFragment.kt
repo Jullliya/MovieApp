@@ -8,17 +8,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.movieapp.R
 import dev.jullls.movieapp.databinding.FragmentDetailMovieBinding
-import dev.jullls.movieapp.presentation.model.Actor
+import dev.jullls.movieapp.domain.filmApi.model.ActorModel
 
 class DetailFragment : Fragment(R.layout.fragment_detail_movie) {
 
     private lateinit var binding: FragmentDetailMovieBinding
 
-    private val actorListDetailMovie = listOf(
-        Actor(R.drawable.cast_1, "Tom Holland"),
-        Actor(R.drawable.cast_2, "Zendaya"),
-        Actor(R.drawable.cast_3, "Benedict Cumberbatch"),
-        Actor(R.drawable.cast_4, "Jacon Batalon")
+    private val actorModelListDetailMovies = listOf(
+        ActorModel(R.drawable.cast_1, "Tom Holland"),
+        ActorModel(R.drawable.cast_2, "Zendaya"),
+        ActorModel(R.drawable.cast_3, "Benedict Cumberbatch"),
+        ActorModel(R.drawable.cast_4, "Jacon Batalon")
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail_movie) {
             rvDetailActors.setHasFixedSize(true)
             rvDetailActors.layoutManager =
                 LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
-            rvDetailActors.adapter = ActorAdapter(actorListDetailMovie)
+            rvDetailActors.adapter = ActorAdapter(actorModelListDetailMovies)
         }
     }
 }

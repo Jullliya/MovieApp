@@ -6,15 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.jullls.movieapp.R
 import dev.jullls.movieapp.databinding.ItemNowShowingFilmBinding
-import dev.jullls.movieapp.presentation.model.Film
+import dev.jullls.movieapp.domain.filmApi.model.FilmModel
 
-class NowShowingFilmAdapter(private val filmList: List<Film>) :
+class NowShowingFilmAdapter(private val filmList: List<FilmModel>) :
     RecyclerView.Adapter<NowShowingFilmAdapter.FilmViewHolder>() {
 
     class FilmViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemNowShowingFilmBinding.bind(view)
 
-        fun bind(film: Film) {
+        fun bind(film: FilmModel) {
             with(binding) {
                 ivItemNowShowingPoster.setImageResource(film.image)
                 tvItemNowShowingName.text = film.name
