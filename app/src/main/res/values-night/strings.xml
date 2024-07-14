@@ -1,18 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Movie</string>
-    <string name="home_title_now_showing">Now Showing</string>
-    <string name="detail_see_more">See more</string>
-    <string name="home_title_popular">Popular</string>
-    <string name="detail_film_name">Spiderman: No Way Home</string>
-    <string name="detail_film_rating">9.1/10 IMDb</string>
-    <string name="now_showing_name_film_2">Eternals</string>
-    <string name="now_showing_rating_film_2">9.5/10 IMDb</string>
-    <string name="now_showing_name_film_3">Shang-Chi</string>
-    <string name="now_showing_rating_film_3">8,1/10 IMDb</string>
-    <string name="popular_name_film_1">Venom Let There Be Carnage</string>
-    <string name="popular_rating_film_1">6.4/10 IMDb</string>
-    <string name="actor_tom_holland">Tom Holland</string>
-    <string name="detail_play_trailer">Play Trailer</string>
     <string name="detail_genres_horror">Horror</string>
     <string name="detail_genres_mystery">Mystery</string>
     <string name="detail_genres_thriller">Thriller</string>
@@ -22,7 +9,6 @@
     <string name="detail_language">English</string>
     <string name="detail_title_rating">Rating</string>
     <string name="detail_rating">PG-13</string>
-    <string name="detail_title_description">Description</string>
     <string name="detail_description">With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.</string>
     <string name="detail_title_cast">Cast</string>
     <string name="home_filmku">FilmKu</string>

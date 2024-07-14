@@ -1,21 +1,21 @@
-package dev.jullls.movieapp
+package dev.jullls.movieapp.presentation.ui.home_fragment
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import dev.jullls.movieapp.R
 import dev.jullls.movieapp.databinding.ItemPopularFilmBinding
+import dev.jullls.movieapp.domain.filmApi.model.FilmModel
 
-class PopularFilmAdapter(private val filmList: List<Film>):
+class PopularFilmAdapter(private val filmList: List<FilmModel>) :
     RecyclerView.Adapter<PopularFilmAdapter.FilmViewHolder>() {
 
-    class FilmViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    class FilmViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemPopularFilmBinding.bind(view)
 
-        fun bind(film: Film){
-            with(binding){
+        fun bind(film: FilmModel) {
+            with(binding) {
                 ivItemPopularPoster.setImageResource(film.image)
                 tvItemPopularName.text = film.name
                 tvItemPopularRating.text = film.rating
@@ -26,7 +26,8 @@ class PopularFilmAdapter(private val filmList: List<Film>):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_popular_film, parent, false)
+            R.layout.item_popular_film, parent, false
+        )
         return FilmViewHolder(view)
     }
 
